@@ -15,7 +15,7 @@ py -3 -m pip install -U spruce.py
 To install the development version, do the following:
 ```sh
 $ git clone https://github.com/hunter87ff/spruce.py
-$ cd sprucepy
+$ cd spruce.py
 ```
 ## Quich Example
 ```py
