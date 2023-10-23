@@ -1,9 +1,10 @@
 import os
-import requests as req
 try:
-    from urllib import urlencode
+    #from urllib import urlencode
+    import requests as req
 except ImportError:
-    from urllib.parse import urlencode
+    #from urllib.parse import urlencode
+    os.system("pip install -r requirements.txt")
 
 
 class Sprucepy(object):
@@ -15,6 +16,6 @@ class Sprucepy(object):
         self.endpoint = endpoint
 
     def ask(self, query:str) -> str:
-        _resp = req(endpoint+f"?q={query}")
+        _resp = req(self.endpoint+f"?q={query}")
         return _resp["a"]
 
