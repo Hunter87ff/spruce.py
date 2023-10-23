@@ -20,7 +20,8 @@ $ cd sprucepy
 ## Quich Example
 ```py
 from sprucepy import Spruce
+bot = Spruce()
 while True:
 	msg = str(input("You : "))
-	print("Spruce : " + Spruce().ask(msg))
+	print("Spruce : " + bot.ask(msg))
 ```
