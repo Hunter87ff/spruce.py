@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "@overload"
+]
+
+[tool.isort]
+profile = "black"
+combine_as_imports = true
+combine_star = true
+line_length = 125
+
+[tool.pyright]
+include = [
+    "sprucepy",
+]
+exclude = [
+    "**/__pycache__",
+    "build",
+    "dist",
+    "docs",
+]
+reportUnnecessaryTypeIgnoreComment = "warning"
+reportUnusedImport = "error"
+pythonVersion = "3.5"
+typeCheckingMode = "basic"
