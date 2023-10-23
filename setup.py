@@ -25,7 +25,7 @@ with open('sprucepy/__init__.py', 'rb') as f:
         f.read().decode('utf-8')).group(1)))
 
 setup(
-    name="sprucepy",
+    name="spruce.py",
     version=version,
     description="Sprucepy API 1.0 Wrapper",
     long_description=generate_long_description(),
@@ -35,7 +35,7 @@ setup(
     url="http://github.com/hunter87ff/sprucepy",
     keywords=["Sprucepy", "api", "wrapper", "1.0"],
     include_package_data=True,
-    packages=["sprucepy"],
+    packages=["spruce.py"],
     install_requires=[
         "requests",
     ],
