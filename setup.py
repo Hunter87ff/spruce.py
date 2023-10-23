@@ -27,13 +27,13 @@ with open('sprucepy/__init__.py', 'rb') as f:
 setup(
     name="sprucepy",
     version=version,
-    description="Sprucepy API 1.1 Wrapper",
+    description="Sprucepy API 1.0 Wrapper",
     long_description=generate_long_description(),
     author="hunter87ff",
     author_email="hunter87@sprucebot.tech",
     license="MIT",
     url="http://github.com/hunter87ff/sprucepy",
-    keywords=["Sprucepy", "api", "wrapper", "1.1"],
+    keywords=["Sprucepy", "api", "wrapper", "1.0"],
     include_package_data=True,
     packages=["sprucepy"],
     install_requires=[
