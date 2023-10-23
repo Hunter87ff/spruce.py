@@ -1,2 +1,2 @@
 __version__ = '1.0.0'
-from .api import Sprucepy
+from .api import Spruce
