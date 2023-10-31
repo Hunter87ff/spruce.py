@@ -6,10 +6,10 @@ def currency_convert(frm:str, to:str, amount:int):
     frm = frm.upper()
     to = to.upper()
     #print(frm, to, amount)
-    url = f"https://www.xe.com/currencyconverter/convert/?Amount={amount}&From={frm}&To={to}"  #you can use your api if you have
+    url = f"https://xe.com/currencyconverter/convert/?Amount={amount}&From={frm}&To={to}"  #you can use your api if you have
     data = req.get(url).text
     soup = bs(data, "html.parser")
-    rate = soup.find("p", {"class": "dPdXSB"}).text  #dPdXSB
+    rate = soup.find("p", {"class": "dPdXSB"}).text 
     print(rate)
 
 
@@ -22,5 +22,6 @@ def filter_text(text):
         for j in i["query"]:
             if j in text.lower():
                 return currency_convert(i["frm"], i["to"], amt)
+    return
 
 #filter_text("convert 5 usd to euro")
