@@ -20,7 +20,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE."""
-import os
 from modules import currency
 import requests as req
 class Spruce:
@@ -28,5 +27,7 @@ class Spruce:
         self.endpoint = 'https://dashboard.87-hunter.repl.co/api/query'
 
     def ask(self, query:str):
-            _resp = req.get(self.endpoint+f"?q={query}").json() 
-            return _resp["a"]
+            _resp = req.get(self.endpoint+f"?q={query}").json()
+            if currency.filter_text(query):
+                return currency.filter_text(query)
+            else:return _resp["a"]
