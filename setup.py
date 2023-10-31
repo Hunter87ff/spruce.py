@@ -38,6 +38,7 @@ setup(
     packages=["sprucepy"],
     install_requires=[
         "requests",
+        "beautifulsoup4"
     ],
     classifiers=(
         "Development Status :: 4 - Beta",
